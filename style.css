@@ -1,0 +1,211 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+}
+
+/* Background container styling */
+.container {
+    background-image: url('https://rsdocs0.s3.eu-north-1.amazonaws.com/0eb38d18-0648-4b7a-80c3-5fb818bfd7be.JPG');
+    background-size: cover;
+    background-position: center bottom; /* Move the image down to show the lady */
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    padding: 0 50px;
+}
+
+/* Styling for the text content */
+.text-content {
+    color: #0F52BA; /* Dark blue */
+    text-align: left;
+    max-width: 600px;
+    z-index: 2;
+    margin-left: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main heading styling */
+.text-content h1 {
+    font-size: 72px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #0F52BA; /* Dark blue */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    line-height: 1.2;
+}
+
+/* Subheading styling */
+.text-content h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #0F52BA; /* Dark blue */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    line-height: 1.4;
+}
+
+/* Fake button styling */
+.buttons {
+    margin-top: 20px;
+}
+
+.fake-button {
+    background-color: #0F52BA;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 10px 5px 0 0;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 500;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fake-button:hover {
+    background-color: #0c3d8c;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Notification bell styling */
+.notification-bell {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 101;
+    color: #0F52BA;
+    transition: transform 0.2s;
+}
+
+.notification-bell:hover {
+    transform: scale(1.1);
+}
+
+/* Notification panel styling */
+.notification-panel {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #0F52BA;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    z-index: 100;
+}
+
+.notification-panel h3 {
+    margin-bottom: 10px;
+    color: #0F52BA;
+    font-size: 18px;
+}
+
+.notification-panel ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.notification-panel li {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#addNotificationButton {
+    background-color: #0F52BA;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#addNotificationButton:hover {
+    background-color: #0c3d8c;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .text-content {
+        margin-left: 20px; /* Less margin on smaller screens */
+    }
+    .text-content h1 {
+        font-size: 50px; /* Adjusted size for smaller screens */
+    }
+    .text-content h2 {
+        font-size: 30px; /* Adjusted size for smaller screens */
+    }
+    .fake-button {
+        font-size: 14px; /* Smaller buttons on smaller screens */
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-content h1 {
+        font-size: 36px; /* Smaller size for small mobile screens */
+    }
+    .text-content h2 {
+        font-size: 24px; /* Smaller size for small mobile screens */
+    }
+    .container {
+        padding: 0 20px; /* Smaller padding to fit mobile screens */
+    }
+}
+
+.embeddedMessagingFrame {
+    height: 644px !important;
+    width: 644px !important;
+}
+
+/* Hide Chat Button
+#embeddedMessagingConversationButton {
+    display: none;
+} */
+
+
+.language-switcher {
+    margin-top: 20px;
+}
+
+.language-switcher label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #0F52BA;
+}
+
+.language-switcher select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #0F52BA;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.language-switcher select:hover {
+    border-color: #0c3d8c;
+}

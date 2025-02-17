@@ -1,56 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Horizon Ferries</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agentforce Help</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="text-content">
-            <h1>Blue Horizon Cruises</h1>
-            <h2>Where Every Journey Meets the Horizon of Possibility</h2>
-            <div class="buttons">
-                <button class="fake-button">Book Now</button>
-                <button class="fake-button">Destinations</button>
-                <button class="fake-button" onclick="initiateChatWithAgent()">Talk to Us</button>
-            </div>
-
-            <!-- Language Switcher Dropdown -->
-            <div class="language-switcher">
-                <label for="languageSelect">Select Language:</label>
-                <select id="languageSelect">
-                    <option value="English" selected>English</option>
-                    <option value="Spanish">Spanish</option>
-                    <option value="Italian">Italian</option>
-                    <option value="French">French</option>
-                </select>
+    <header>
+        <nav>
+            <a href="#">Help</a>
+            <a href="#">Ask Agentforce</a>
+            <a href="#">Product Documentation</a>
+            <a href="#">Trailhead Learning</a>
+            <a href="#">My Cases</a>
+            <button class="contact-support">Contact Support</button>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC_QFbTFMasUfnuKan4pWGlVr4700Fo7_9-w&s" alt="Agentforce Robot" class="robot-icon">
+            <h1>How can <span class="brand">Agentforce</span> help?</h1>
+            <div class="search-bar">
+                <input id="queryInput" type="text" placeholder='Ask questions like "How do I reset my password?"'>
+                <button class="search-btn" onclick="handleSearch()">🔍</button>
             </div>
         </div>
-    </div>
-
-    <!-- Notification Bell using SVG -->
-    <div class="notification-bell" id="notificationBell">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 22C13.1046 22 14 21.1046 14 20H10C10 21.1046 10.8954 22 12 22ZM18 16V11C18 7.41015 16.1705 5.21607 13.0392 4.40884C12.7713 3.12732 11.5148 2.20196 10.0784 2.50335C8.66389 2.79771 7.75648 4.12947 8.03184 5.51648C5.34401 6.29876 4 8.28441 4 11V16L2 18V19H22V18L20 16H18Z" />
-        </svg>
-    </div>
-
-    <!-- Notification Panel -->
-    <div class="notification-panel" id="notificationPanel" style="display: none;">
-        <h3>Updates from your Captain Agentforce</h3>
-        <ul id="notificationList">
-            <li>Unfortunately, our arrival time to Gran Canaria has been delayed by an hour due to bad weather conditions.</li>
-            <li>I updated your rental Car reservation and pickup time accordingly.</li>
-        </ul>
-        <button id="addNotificationButton">Add Notification</button>
-    </div>
-
-    <!-- Reference to the Salesforce Embedder Service Deployment JS Code-->
+        <!-- Embedded Messaging Container -->
+        <div id="embeddedMessagingContainer" class="chat-modal"></div>
+    </main>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="https://storm-afedf835096def.my.site.com/ESWSDOMessagingInnovati1730124818682/assets/js/bootstrap.min.js" onload="initEmbeddedMessaging()"></script>
-    <!-- Reference ends-->
 </body>
 </html>

@@ -1,18 +1,19 @@
 function initEmbeddedMessaging() {
-    try {
-        window.embeddedservice_bootstrap.settings.language = 'en_US';
-        embeddedservice_bootstrap.settings.enableUserInputForConversationWithBot = false;
-        window.embeddedservice_bootstrap.init(
-            '00DHs00000Clx3e',
-            'SDO_Messaging_Innovation_Day_Glitch_Blue_Horizon',
-            'https://storm-afedf835096def.my.site.com/ESWSDOMessagingInnovati1730124818682', {
-                scrt2URL: 'https://storm-afedf835096def.my.salesforce-scrt.com'
-            }
-        );
-    } catch (err) {
-        console.error('Error loading Embedded Messaging: ', err);
-    }
-}
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DKc000005GG4x',
+				'SDO_Messaging_for_Web',
+				'https://tmichaely-250216-752-demo.my.site.com/ESWSDOMessagingforWeb1739705623659',
+				{
+					scrt2URL: 'https://tmichaely-250216-752-demo.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
 
 window.addEventListener("onEmbeddedMessagingReady", () => {
     embeddedservice_bootstrap.settings.targetElement = document.body.querySelector("#embeddedMessagingContainer");
